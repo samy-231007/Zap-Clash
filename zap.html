@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8"> <!-- Zeichenkodierung auf UTF-8 setzen -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsives Design aktivieren -->
+    <title>Fruit Zap</title> <!-- Titel der Seite -->
+    <!-- Bootstrap CSS für Styling und Responsivität -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Orbitron-Schriftart für einen futuristischen Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <!-- Eigenes CSS für zusätzliches Styling -->
+    <link rel="stylesheet" href="zap.css">
+</head>
+<body>
+    <!-- Hauptcontainer mit zentriertem Inhalt und Abstand oben -->
+    <div class="container text-center mt-4">
+        <!-- Titel mit Neon-Effekt und Glitch-Animation -->
+        <h1 class="display-3 text-neon zap-title animate-glitch">Fruit Zap</h1>
+        <!-- Container für die Slot-Maschine, zentriert und relativ positioniert -->
+        <div class="zap-machine mx-auto position-relative">
+            <!-- Bereich für die Walzen -->
+            <div class="reels">
+                <!-- Erste Reihe der Walzen -->
+                <div class="row g-0">
+                    <div class="col reel" id="reel-0-0">🍒</div> <!-- Erste Walze mit Kirsche -->
+                    <div class="col reel" id="reel-0-1">🍋</div> <!-- Zweite Walze mit Zitrone -->
+                    <div class="col reel" id="reel-0-2">🍊</div> <!-- Dritte Walze mit Orange -->
+                </div>
+                <!-- Zweite Reihe der Walzen -->
+                <div class="row g-0">
+                    <div class="col reel" id="reel-1-0">🍇</div> <!-- Erste Walze mit Traube -->
+                    <div class="col reel" id="reel-1-1">🍉</div> <!-- Zweite Walze mit Wassermelone -->
+                    <div class="col reel" id="reel-1-2">🍍</div> <!-- Dritte Walze mit Ananas -->
+                </div>
+                <!-- Dritte Reihe der Walzen -->
+                <div class="row g-0">
+                    <div class="col reel" id="reel-2-0">🔔</div> <!-- Erste Walze mit Glocke -->
+                    <div class="col reel" id="reel-2-1">⭐</div> <!-- Zweite Walze mit Stern -->
+                    <div class="col reel" id="reel-2-2">🍀</div> <!-- Dritte Walze mit Kleeblatt -->
+                </div>
+            </div>
+            <!-- Container für Gewinnlinien, absolut positioniert -->
+            <div id="winLines" class="position-absolute top-0 start-0 w-100 h-100"></div>
+        </div>
+        <!-- Statistikbereich mit Neon-Text -->
+        <div class="mt-3 text-neon zap-stats">
+            <!-- Anzeige des aktuellen Guthabens -->
+            <p>Cash: <span id="balance">1000</span> €</p>
+            <!-- Label für das Einsatz-Auswahlfeld -->
+            <label for="betAmount">Bet setzen:</label>
+            <!-- Dropdown zur Auswahl des Einsatzes -->
+            <select id="betAmount" class="form-select w-25 mx-auto zap-select">
+                <option value="10">10 €</option> <!-- Einsatzoption 10 € -->
+                <option value="20">20 €</option> <!-- Einsatzoption 20 € -->
+                <option value="50">50 €</option> <!-- Einsatzoption 50 € -->
+                <option value="100">100 €</option> <!-- Einsatzoption 100 € -->
+            </select>
+        </div>
+        <!-- Button zum Starten des Spins mit Pulsanimation -->
+        <button id="spinBtn" class="btn btn-zap btn-lg mt-3 animate-pulse zap-btn">Zap!</button>
+        <!-- Button für automatische Spins -->
+        <button id="autoPlayBtn" class="btn btn-zap btn-lg mt-3 ms-2 zap-btn">Auto-Zap</button>
+        <!-- Ergebnisanzeige mit Neon-Text -->
+        <p id="result" class="text-neon mt-3 zap-result"></p>
+        <!-- Zurück-Button zum Hauptmenü -->
+        <a href="index.html" class="btn btn-secondary mt-3 zap-back">Back</a>
+    </div>
+    <!-- Popper.js für Bootstrap-Funktionen -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS für interaktive Elemente -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- Eigenes JavaScript für die Spiellogik -->
+    <script src="zap.js"></script>
+</body>
+</html>

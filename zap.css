@@ -1,0 +1,238 @@
+/* Styling für den gesamten Body */
+body {
+    background: linear-gradient(135deg, #1a1a2e, #0f0f1f, #16213e); /* Dunkler, eleganter Farbverlauf (Blau-Violett) */
+    height: 100vh; /* Höhe auf volle Bildschirmhöhe setzen */
+    overflow: hidden; /* Verhindert Scrollen */
+    font-family: 'Orbitron', sans-serif; /* Futuristische Schriftart */
+    margin: 0; /* Entfernt Standard-Ränder */
+    padding: 0; /* Entfernt Standard-Innenabstände */
+}
+
+/* Container für den Hauptinhalt */
+.container {
+    position: relative; /* Relative Positionierung für Überlagerungen */
+    z-index: 2; /* Stellt sicher, dass der Container über dem Hintergrund liegt */
+    padding: 10px; /* Innenabstand für Abstand vom Rand */
+}
+
+/* Neon-Text-Styling */
+.text-neon {
+    color: #e0f7ff; /* Sanftes Türkis-Weiß als Textfarbe */
+    text-shadow: 0 0 3px #00d4ff, 0 0 8px #8a2be2; /* Türkis- und Violettschatten für Neon-Effekt */
+}
+
+/* Styling für den Titel */
+.zap-title {
+    font-size: 3.5rem; /* Große Schriftgröße */
+    letter-spacing: 4px; /* Abstand zwischen Buchstaben */
+    animation: glow 1.5s infinite alternate; /* Leuchtende Animation, abwechselnd */
+    margin-bottom: 20px; /* Abstand nach unten */
+}
+
+/* Styling für die Slot-Maschine */
+.zap-machine {
+    background: linear-gradient(45deg, #2a2a3d, #1f1f2f); /* Farbverlauf von Dunkelgrau zu Dunkelviolett */
+    border: 8px solid #8a2be2; /* Subtiler violetter Rahmen */
+    border-radius: 20px; /* Abgerundete Ecken */
+    padding: 15px; /* Innenabstand */
+    width: 100%; /* Volle Breite */
+    max-width: 400px; /* Maximale Breite begrenzen */
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.5), inset 0 0 10px rgba(0, 212, 255, 0.3); /* Äußerer violetter Schatten, innerer türkiser Schatten */
+    margin: 0 auto; /* Zentriert die Maschine */
+}
+
+/* Styling für den Walzenbereich */
+.reels {
+    background: linear-gradient(#1f1f2f, #2a2a3d); /* Farbverlauf für Walzenhintergrund */
+    border-radius: 10px; /* Abgerundete Ecken */
+    overflow: hidden; /* Verhindert Überlaufen der Walzen */
+    border: 2px solid #00d4ff; /* Türkiser Rahmen */
+}
+
+/* Styling für einzelne Walzen */
+.reel {
+    font-size: 40px; /* Schriftgröße der Symbole */
+    line-height: 80px; /* Zeilenhöhe gleich Höhe der Walze */
+    height: 80px; /* Höhe der Walze */
+    text-align: center; /* Text zentrieren */
+    transition: transform 0.1s ease-out, color 0.2s; /* Sanfte Übergänge für Transformation und Farbe */
+    background: radial-gradient(circle, #fff 10%, transparent 60%); /* Radialer Verlauf für Symbolhintergrund */
+    border-radius: 8px; /* Abgerundete Ecken */
+    margin: 2px; /* Kleiner Abstand zwischen Walzen */
+}
+
+/* Styling für drehende Walzen */
+.reel.spinning {
+    color: #00d4ff; /* Türkise Farbe während des Drehens */
+    text-shadow: 0 0 15px #00d4ff; /* Türkiser Schatten für Neon-Effekt */
+    animation: spinFade 0.1s infinite; /* Fade-Animation während des Drehens */
+}
+
+/* Styling für gewinnende Walzen */
+.reel.winning {
+    animation: winGlow 0.5s infinite alternate; /* Leuchtende Animation für Gewinne */
+    background: radial-gradient(circle, #8a2be2 20%, transparent 60%); /* Violetter Hintergrund für Gewinne */
+    color: #fff; /* Weiße Textfarbe */
+}
+
+/* Container für Gewinnlinien */
+#winLines {
+    pointer-events: none; /* Verhindert Interaktion mit Gewinnlinien */
+}
+
+/* Styling für Gewinnlinien */
+.win-line {
+    position: absolute; /* Absolute Positionierung für genaue Platzierung */
+    background: linear-gradient(90deg, #8a2be2, #00d4ff); /* Farbverlauf von Violett zu Türkis */
+    box-shadow: 0 0 15px #00d4ff; /* Türkiser Schatten */
+    border-radius: 4px; /* Abgerundete Ecken */
+    animation: linePulse 0.6s infinite; /* Pulsierende Animation */
+}
+
+/* Styling für Statistik und Ergebnistext */
+.zap-stats, .zap-result {
+    font-size: 1.1rem; /* Schriftgröße */
+    letter-spacing: 2px; /* Abstand zwischen Buchstaben */
+}
+
+/* Styling für Buttons */
+.zap-btn {
+    background: linear-gradient(90deg, #8a2be2, #00d4ff); /* Farbverlauf von Violett zu Türkis */
+    border: 2px solid #e0f7ff; /* Türkis-weißer Rahmen */
+    color: #1a1a2e; /* Dunkle Textfarbe */
+    font-weight: bold; /* Fette Schrift */
+    text-transform: uppercase; /* Großbuchstaben */
+    box-shadow: 0 0 10px #00d4ff; /* Türkiser Schatten */
+    transition: transform 0.2s, box-shadow 0.2s; /* Sanfte Übergänge für Transformation und Schatten */
+    padding: 10px 20px; /* Innenabstand */
+}
+
+/* Hover-Effekt für Buttons */
+.zap-btn:hover {
+    transform: scale(1.1); /* Vergrößert den Button leicht */
+    box-shadow: 0 0 20px #8a2be2; /* Stärkerer violetter Schatten */
+    color: #fff; /* Weiße Textfarbe beim Hover */
+}
+
+/* Styling für das Einsatz-Dropdown */
+.zap-select {
+    background: #2a2a3d; /* Dunkelgrauer Hintergrund */
+    color: #e0f7ff; /* Türkis-weiße Textfarbe */
+    border: 2px solid #00d4ff; /* Türkiser Rahmen */
+    box-shadow: 0 0 8px #00d4ff; /* Türkiser Schatten */
+    padding: 5px; /* Innenabstand */
+}
+
+/* Styling für den Zurück-Button */
+.zap-back {
+    background: #2a2a3d; /* Dunkelgrauer Hintergrund */
+    border: 2px solid #e0f7ff; /* Türkis-weißer Rahmen */
+    color: #00d4ff; /* Türkise Textfarbe */
+    transition: transform 0.2s; /* Sanfter Übergang für Transformation */
+    padding: 8px 16px; /* Innenabstand */
+}
+
+/* Hover-Effekt für den Zurück-Button */
+.zap-back:hover {
+    transform: scale(1.05); /* Leicht vergrößert */
+    box-shadow: 0 0 15px #e0f7ff; /* Türkis-weißer Schatten */
+}
+
+/* Pulsierende Animation */
+.animate-pulse {
+    animation: pulse 1s infinite; /* Puls-Animation unendlich wiederholt */
+}
+
+/* Leuchtende Animation */
+.animate-glow {
+    animation: glow 1.5s infinite alternate; /* Leuchtende Animation, abwechselnd */
+}
+
+/* Definition der Puls-Animation */
+@keyframes pulse {
+    0% { transform: scale(1); } /* Normalgröße */
+    50% { transform: scale(1.08); } /* Leicht vergrößert */
+    100% { transform: scale(1); } /* Zurück zur Normalgröße */
+}
+
+/* Definition der Leucht-Animation */
+@keyframes glow {
+    from { text-shadow: 0 0 3px #e0f7ff, 0 0 8px #00d4ff; } /* Sanfter Schatten */
+    to { text-shadow: 0 0 8px #e0f7ff, 0 0 15px #8a2be2; } /* Stärkerer Schatten */
+}
+
+/* Definition der Fade-Animation beim Drehen */
+@keyframes spinFade {
+    0% { opacity: 0.8; } /* Leicht transparent */
+    50% { opacity: 0.4; } /* Stärker transparent */
+    100% { opacity: 0.8; } /* Zurück zu leicht transparent */
+}
+
+/* Definition der Gewinn-Leucht-Animation */
+@keyframes winGlow {
+    from { text-shadow: 0 0 5px #8a2be2; } /* Sanfter violetter Schatten */
+    to { text-shadow: 0 0 15px #00d4ff, 0 0 20px #e0f7ff; } /* Stärkerer türkis-weißer Schatten */
+}
+
+/* Definition der Puls-Animation für Gewinnlinien */
+@keyframes linePulse {
+    0% { opacity: 0.7; } /* Leicht transparent */
+    50% { opacity: 1; } /* Voll sichtbar */
+    100% { opacity: 0.7; } /* Zurück zu leicht transparent */
+}
+
+/* Responsive Anpassungen für Bildschirme bis 768px */
+@media (max-width: 768px) {
+    .zap-title {
+        font-size: 2.2rem; /* Kleinere Schriftgröße für Titel */
+        margin-bottom: 15px; /* Weniger Abstand nach unten */
+    }
+    .zap-machine {
+        max-width: 100%; /* Volle Breite nutzen */
+        padding: 10px; /* Kleinerer Innenabstand */
+        border-width: 6px; /* Dünnerer Rahmen */
+    }
+    .reel {
+        font-size: 30px; /* Kleinere Symbolgröße */
+        line-height: 60px; /* Kleinere Zeilenhöhe */
+        height: 60px; /* Kleinere Höhe */
+        margin: 1px; /* Weniger Abstand */
+    }
+    .zap-stats, .zap-result {
+        font-size: 1rem; /* Kleinere Schriftgröße */
+    }
+    .zap-btn {
+        font-size: 1rem; /* Kleinere Schriftgröße für Buttons */
+        padding: 8px 16px; /* Kleinerer Innenabstand */
+    }
+    .zap-select {
+        width: 50%; /* Breite auf 50% anpassen */
+        font-size: 0.9rem; /* Kleinere Schriftgröße */
+    }
+    .zap-back {
+        font-size: 0.9rem; /* Kleinere Schriftgröße */
+        padding: 6px 12px; /* Kleinerer Innenabstand */
+    }
+}
+
+/* Responsive Anpassungen für Bildschirme bis 480px */
+@media (max-width: 480px) {
+    .zap-title {
+        font-size: 1.8rem; /* Noch kleinere Schriftgröße für Titel */
+    }
+    .zap-machine {
+        padding: 8px; /* Noch kleinerer Innenabstand */
+    }
+    .reel {
+        font-size: 25px; /* Noch kleinere Symbolgröße */
+        line-height: 50px; /* Noch kleinere Zeilenhöhe */
+        height: 50px; /* Noch kleinere Höhe */
+    }
+    .zap-btn {
+        font-size: 0.9rem; /* Noch kleinere Schriftgröße für Buttons */
+        padding: 6px 12px; /* Noch kleinerer Innenabstand */
+    }
+    .zap-select {
+        width: 60%; /* Breite auf 60% anpassen */
+    }
+}

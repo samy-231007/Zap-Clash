@@ -1,0 +1,108 @@
+/* Styling für den gesamten Body */
+body {
+    background: linear-gradient(135deg, #0d001a, #1a0033, #001a1a); /* Hintergrund mit Farbverlauf (Dunkelviolett zu Dunkelgrün) */
+    height: 100vh; /* Höhe auf volle Bildschirmhöhe setzen */
+    overflow: hidden; /* Verhindert Scrollen */
+    font-family: 'Orbitron', sans-serif; /* Futuristische Schriftart */
+    position: relative; /* Relative Positionierung für z-Index */
+}
+
+/* Container für den Hauptinhalt */
+.container {
+    position: relative; /* Relative Positionierung für Überlagerungen */
+    z-index: 2; /* Stellt sicher, dass der Container über dem Hintergrund liegt */
+}
+
+/* Neon-Text-Styling */
+.text-neon {
+    color: #00ffcc; /* Türkisfarbener Text */
+    text-shadow: 0 0 5px #00ffcc, 0 0 15px #ff00ff, 0 0 25px #ffd700; /* Mehrfacher Schatten für Neon-Effekt (Türkis, Pink, Gold) */
+}
+
+/* Styling für den Titel */
+.zap-title {
+    font-size: 4rem; /* Große Schriftgröße */
+    letter-spacing: 5px; /* Abstand zwischen Buchstaben */
+    animation: glitch 2s infinite; /* Glitch-Animation unendlich wiederholt */
+}
+
+/* Styling für den Untertitel */
+.zap-subtitle {
+    font-size: 1.5rem; /* Mittlere Schriftgröße */
+    letter-spacing: 3px; /* Abstand zwischen Buchstaben */
+}
+
+/* Styling für die Spielkarte */
+.zap-card {
+    background: linear-gradient(45deg, #1a1a1a, #333); /* Farbverlauf von Dunkelgrau zu Grau */
+    border: 4px solid #ff00ff; /* Neon-Pink-Rahmen */
+    border-radius: 15px; /* Abgerundete Ecken */
+    padding: 20px; /* Innenabstand */
+    box-shadow: 0 0 20px #ff00ff, inset 0 0 10px #00ffcc; /* Äußerer Pink-Schatten und innerer Türkis-Schatten */
+    transition: transform 0.3s, box-shadow 0.3s; /* Sanfte Übergänge für Transformation und Schatten */
+}
+
+/* Hover-Effekt für die Spielkarte */
+.zap-card:hover {
+    transform: scale(1.1); /* Vergrößert die Karte leicht */
+    box-shadow: 0 0 30px #ffd700, inset 0 0 15px #ff00ff; /* Stärkerer goldener Schatten außen, Pink innen */
+}
+
+/* Styling für den Spieltitel */
+.zap-game-title {
+    font-size: 2rem; /* Schriftgröße für den Titel */
+    letter-spacing: 2px; /* Abstand zwischen Buchstaben */
+}
+
+/* Styling für den Zap-Button */
+.btn-zap {
+    background: linear-gradient(90deg, #ff00ff, #00ffcc); /* Farbverlauf von Pink zu Türkis */
+    border: 3px solid #ffd700; /* Goldener Rahmen */
+    color: #1a1a1a; /* Dunkle Textfarbe */
+    font-weight: bold; /* Fette Schrift */
+    text-transform: uppercase; /* Großbuchstaben */
+    box-shadow: 0 0 15px #ffd700; /* Goldener Schatten */
+    transition: transform 0.2s, box-shadow 0.2s; /* Sanfte Übergänge für Transformation und Schatten */
+}
+
+/* Hover-Effekt für den Zap-Button */
+.btn-zap:hover {
+    transform: scale(1.15); /* Vergrößert den Button leicht */
+    box-shadow: 0 0 25px #ff00ff; /* Stärkerer Pink-Schatten */
+    color: #fff; /* Weiße Textfarbe beim Hover */
+}
+
+/* Pulsierende Animation */
+.animate-pulse {
+    animation: pulse 0.8s infinite; /* Puls-Animation unendlich wiederholt */
+}
+
+/* Glitch-Animation */
+.animate-glitch {
+    animation: glitch 1.5s infinite; /* Glitch-Animation unendlich wiederholt */
+}
+
+/* Definition der Puls-Animation */
+@keyframes pulse {
+    0% { transform: scale(1); } /* Normalgröße */
+    50% { transform: scale(1.1); } /* Vergrößert */
+    100% { transform: scale(1); } /* Zurück zur Normalgröße */
+}
+
+/* Definition der Glitch-Animation */
+@keyframes glitch {
+    0% { transform: translate(0); } /* Keine Verschiebung */
+    20% { transform: translate(-3px, 3px); } /* Leichte Verschiebung nach unten rechts */
+    40% { transform: translate(3px, -3px); } /* Leichte Verschiebung nach oben links */
+    60% { transform: translate(-3px, 0); } /* Verschiebung nach links */
+    80% { transform: translate(3px, 0); } /* Verschiebung nach rechts */
+    100% { transform: translate(0); } /* Zurück zur Ausgangsposition */
+}
+
+/* Responsive Anpassungen für Bildschirme bis 768px */
+@media (max-width: 768px) {
+    .zap-title { font-size: 2.5rem; } /* Kleinere Schriftgröße für Titel */
+    .zap-subtitle { font-size: 1rem; } /* Kleinere Schriftgröße für Untertitel */
+    .zap-game-title { font-size: 1.5rem; } /* Kleinere Schriftgröße für Spieltitel */
+    .btn-zap { font-size: 1.2rem; } /* Kleinere Schriftgröße für Button */
+}
